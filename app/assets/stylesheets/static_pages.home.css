@@ -3,12 +3,12 @@
 	background-color: transparent;
 	border-color: transparent;
 }
-.logo
+img.logo
 {
 	height: 150px;
 	width: 150px;
 }
-.section
+.content
 {
 	background: url(coastal-sunset.jpg)no-repeat center; 
 	height: 100%;
