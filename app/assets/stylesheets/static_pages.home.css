@@ -11,7 +11,7 @@ img.logo
 .content
 {
 	background: url(coastal-sunset.jpg)no-repeat center; 
-	height: 100%;
+	height: 600px;
 	width: 100%;
 	background-position: center center;
 	background-size: cover;
