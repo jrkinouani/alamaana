@@ -4,4 +4,8 @@ class StaticPagesController < ApplicationController
 
   def about
   end
+
+  def mentions
+  	
+  end
 end
