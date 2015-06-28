@@ -15,7 +15,15 @@
 	left: 0;
 	top: 0;
 }
-
+.navbar 
+{
+	position: relative;
+	min-height: 50px;
+	margin-bottom: 0px;
+	border: 0px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
 .navbar-inverse
 {
 	background-color: transparent;
@@ -59,7 +67,7 @@ footer
 	margin-top:40px;
 	margin-bottom: 40px;
 }
-.social
+p.social
 {
 	margin-top: 40px;
 }
@@ -67,5 +75,5 @@ img.youtube
 {
 	height: 50px!important;
 	width: 50px!important;
-	margin-right: 15px;
+	margin-right: 20px!important;
 }
