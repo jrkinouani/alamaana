@@ -12,7 +12,7 @@
 
 </head>
 <body>
-		 <nav class="navbar navbar-fixed-top navbar-inverse">
+	  <!--<nav class="navbar navbar-fixed-top navbar-inverse">
 	    <div class="container">
 	      <div class="navbar-header">
 	        <%= link_to (image_tag("logo.JPG", class: "logo")), root_path %>
@@ -22,19 +22,18 @@
 	          <span class="icon-bar"></span>
 	          <span class="icon-bar"></span>
 	        </button>
-	        <!--<%= link_to "Booostme", root_path, :class => "navbar-brand" %>-->
 	       
 	      </div>
 	      <div id="navbar" class="collapse navbar-collapse">
 	        <ul class="nav navbar-nav pull-right">
-	          <!<li><%= link_to "A propos",  about_path, class: "linknav"%></li>
-	          
-	          
-	        </ul>
+	          <li role="presentation" class="active"><a href="https://www.paypal.com/fr/cgi-bin/webscr?cmd=_flow&SESSION=bKyDUXhA1md6dIeDO9xLLoq3jjDLbXLBJcjF1lHALO_h6O9JMlz7HFdatim&dispatch=5885d80a13c0db1f8e263663d3faee8de6030e9239419d79c3f52f70a3ed57ec">Faire un don</a></li>
+              <li role="presentation" class="linkabout"><%= link_to "A propos",  about_path %></li>
+	          </ul>
 	      </div><!-- /.nav-collapse -->
 	    </div><!-- /.container -->
 	  </nav>
-<%= yield %>
-
+	 
+		<%= yield %>
+	  </div>
 </body>
 </html>

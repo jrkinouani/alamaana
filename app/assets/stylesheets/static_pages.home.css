@@ -1,16 +1,10 @@
-.navbar-inverse
-{
-	background-color: transparent;
-	border-color: transparent;
-}
-img.logo
-{
-	height: 150px;
-	width: 150px;
-}
-.content
-{
-	background: url(coastal-sunset.jpg)no-repeat center; 
+
+.jumbotron {
+  /* padding: 30px; */
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: #eee;
+  background: url(coastal-sunset.jpg)no-repeat center; 
 	height: 600px;
 	width: 100%;
 	background-position: center center;
@@ -21,14 +15,35 @@ img.logo
 	left: 0;
 	top: 0;
 }
-a.linknav
+
+.navbar-inverse
 {
-	bottom: 300px!important;	
-	color: white;
-	font-size: 24px;
-	font-weight: bold;
+	background-color: transparent;
+	border-color: transparent;
 }
-ul.nav.navbar-nav.pull-right
+img.logo
+{
+	height: 150px;
+	width: 150px;
+}
+ul.nav.nav-pills.pull-right
 {
 	padding-top: 50px;
+	color: white;
+	font-size: 18px;
+}	
+.container.marketing
+{
+	margin-top: 600px;
+}
+#paypal
+{
+	margin-top: 300px;
+
+}
+h1.punchline
+{
+	color: white;
+	font-size: 40px;
+	margin-top: 90px;
 }

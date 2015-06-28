@@ -1,0 +1,35 @@
+body.apropos
+{
+	background-color: whitesmoke;
+}
+.navbar.navbar-inverse.navbar-static-top.about
+{
+	background-color: white;
+}
+	.about
+{
+	
+	height: 100%;
+	
+	
+}
+.navbar {
+   position: relative;
+   min-height: 50px;
+   margin-bottom: 0px;
+   border: 0px;
+   
+}
+.mission
+{
+	font-size: 18px;
+	font-weight: bold;
+}
+.container.marketing.about
+{
+	margin-top: 100px;
+}
+#profile
+{
+	margin-bottom: 60px;
+}
