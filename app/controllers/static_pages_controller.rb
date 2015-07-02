@@ -8,4 +8,9 @@ class StaticPagesController < ApplicationController
   def mentions
   	
   end
+
+  def paiement
+  	
+  end
+  
 end

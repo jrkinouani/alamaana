@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root "static_pages#home"
   get "about" => 'static_pages#about'
   get "mentions" => 'static_pages#mentions'
+  get "paiement" => 'static_pages#paiement'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
