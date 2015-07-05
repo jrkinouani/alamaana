@@ -34,6 +34,13 @@
 
     <div class="form-row">
       <label>
+        <span>prix</span>
+        <%= f.text_field :price, class: 'form-control' %>
+      </label>
+    </div>
+
+    <div class="form-row">
+      <label>
         <span>nom</span>
         <%= f.text_field :last_name, class: 'form-control' %>
       </label>
@@ -47,6 +54,7 @@
     </div>
 
     <div class="form-row">
+
       <label>
         <span>Card Number</span>
         <input type="text" size="20" data-stripe="number" id="card_number" />
@@ -73,7 +81,7 @@
       <%= f.submit "send money", :class => "btn btn-lg btn-primary" %>
     </div>
   <%end%>
-  </form>
+  
     <!--<form action=<%= charges_path %> method="POST" id="payment-form">
       <span class="payment-errors"></span>
 
@@ -107,7 +115,7 @@
 
 <script type="text/javascript">
   // This identifies your website in the createToken call below
-  Stripe.setPublishableKey('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
+  Stripe.setPublishableKey('pk_test_GkGtqHerZHWAxOmZEoreYASE');
   // ...
   jQuery(function($) {
   $('#payment-form').submit(function(event) {

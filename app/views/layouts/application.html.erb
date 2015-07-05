@@ -7,7 +7,8 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <script type="text/javascript" src="https://js.stripe.com/v2/">
-   Stripe.setPublishableKey('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
+  
+   Stripe.setPublishableKey('pk_test_GkGtqHerZHWAxOmZEoreYASE');
    </script>
   <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   <%= csrf_meta_tags %>
@@ -35,7 +36,10 @@
 	      </div><!-- /.nav-collapse -->
 	    </div><!-- /.container -->
 	  </nav>
-	 
+	 <% flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, class: name %>
+    <% end -%>
+
 		<%= yield %>
 	  </div>
 </body>
