@@ -41,4 +41,13 @@ class StaticPagesController < ApplicationController
   def charges_params
     params.require(:charge).permit(:email, :first_name, :last_name, :price)
   end
+
+
+  def create
+  @charge = Charge.new(params[:charge])
+  @charge.next_step
+  @charge.next_step
+  session[:charge_step] = @charge.current_step
+  render 'paiement'
+  end
 end

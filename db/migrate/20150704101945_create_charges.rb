@@ -1,4 +1,4 @@
-class CreateCharges < ActiveRecord::Migration
+	class CreateCharges < ActiveRecord::Migration
   def change
     create_table :charges do |t|
       t.string :first_name

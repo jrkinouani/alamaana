@@ -20,22 +20,24 @@
           
 </nav>
 <div class="row">
-  <div class="text-center"><h3>Paiement</h3></div>
+  
   <div class="col-lg-4 col-lg-offset-4">
-
+ <div class="text-center"><h1>Faites un don</h1></div>
   
     <%= form_for(@charge, url: charges_path, html: {method: :post, id: "payment-form"})  do |f|%>
+    
     <div class="form-row">
+      <label>
+        <span>Entrez votre somme</span>
+        <!--<%= f.text_field :price, class: 'form-control' %>-->
+        <%= render 'price_step', :f => f %>
+      </label>
+    </div>
+    <div class="form-row">
+
       <label>
         <span>prénom</span>
         <%= f.text_field :first_name, class: 'form-control' %>
-      </label>
-    </div>
-
-    <div class="form-row">
-      <label>
-        <span>prix</span>
-        <%= f.text_field :price, class: 'form-control' %>
       </label>
     </div>
 
@@ -82,34 +84,7 @@
     </div>
   <%end%>
   
-    <!--<form action=<%= charges_path %> method="POST" id="payment-form">
-      <span class="payment-errors"></span>
-
-      <div class="form-row">
-        <label>
-          <span>Numéro de carte</span>
-          <input type="text" size="20" data-stripe="number"/>
-        </label>
-      </div>
-
-      <div class="form-row">
-        <label>
-          <span>CVC</span>
-          <input type="text" size="4" data-stripe="cvc"/>
-        </label>
-      </div>
-
-      <div class="form-row">
-        <label>
-          <span>Date d'expiration (MM/YYYY)</span>
-          <input type="text" size="2" data-stripe="exp-month"/>
-        </label>
-        <span> / </span>
-        <input type="text" size="4" data-stripe="exp-year"/>
-      </div>
-
-      <button type="submit">Valider le Paiement</button>
-    </form>-->
+    
    </div> 
 </div>
 

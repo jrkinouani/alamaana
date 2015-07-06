@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get "mentions" => 'static_pages#mentions'
   get "paiement" => 'static_pages#paiement'
   post "charges" => "static_pages#charges"
+  get "price_step" => "static_pages#price_step"
+ 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
