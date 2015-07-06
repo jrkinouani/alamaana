@@ -17,6 +17,18 @@ body.apropos
    border: 0px;
    
 }
+.nav-pills>li.active>a
+{
+	background-color: #ee6059!important;
+}
+a.btna
+{
+	color: white!important;
+}
+.nav>li>a:hover
+{
+	background-color: #3276b1;
+}
 .mission
 {
 	font-size: 18px;
