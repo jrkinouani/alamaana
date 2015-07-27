@@ -1,126 +1,142 @@
-<nav class="navbar navbar-inverse navbar-static-top">
-  <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <%= link_to (image_tag("logo.JPG", class: "logo")), root_path %>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="https://www.paypal.com/fr/cgi-bin/webscr">Faire un don</a></li>
-            <li role="presentation"><%= link_to "A propos",  about_path %></li>
-            <li role="presentation"><%= link_to "paiement",  paiement_path %></li>
-            
-            
-          </ul>
-  </div>
-          
-</nav>
-<div class="row">
-  
-  <div class="col-lg-4 col-lg-offset-4" id="zonepay">
- <div class="text-center"><h1>Faites un don</h1></div>
-  
-    <%= form_for(@charge, url: charges_path, html: {method: :post, id: "payment-form"})  do |f|%>
-    
-    <div class="form-row">
-      <label>
-        <span>Entrez votre somme</span>
-        <%= f.text_field :price, class: 'form-control' %>
-      </label>
-    </div>
-    <div class="form-row">
+<div class="jumbotron pay">
+  <div class="navbar-wrapper">
 
-      <label>
-        <span>prénom</span>
-        <%= f.text_field :first_name, class: 'form-control' %>
-      </label>
-    </div>
-
-    <div class="form-row">
-      <label>
-        <span>nom</span>
-        <%= f.text_field :last_name, class: 'form-control' %>
-      </label>
-    </div>
-
-    <div class="form-row">
-      <label>
-        <span>email</span>
-        <%= f.text_field :email, class: 'form-control' %>
-      </label>
-    </div>
-
-    <div class="form-row">
-
-      <label>
-        <span>Card Number</span>
-        <input type="text" size="20" data-stripe="number" id="card_number" class='form-control'/>
-      </label>
-    </div>
-
-    <div class="form-row">
-      <label>
-        <span>CVC</span>
-        <input type="text" size="4" data-stripe="cvc" id="cvc" class='form-control'/>
-      </label>
-    </div>
-
-    <div class="form-row">
-      <label>
-        <span>Expiration<br> (MM/YYYY)</span>
-        <input type="text" size="2" data-stripe="exp-month" id="exp-month"/>
-      </label>
-      <span> / </span>
-      <input type="text" size="4" data-stripe="exp-year" id="exp-year" />
-    </div>
-
-    <div class="text-center">
-      <div class="actions">
-        <%= f.submit "send money", :class => "btn btn-lg btn-primary" %>
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <%= link_to (image_tag("logo.JPG", class: "logo")), root_path %>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                  <ul class="nav nav-pills pull-right">
+                <li role="presentation" class="active"><a href="https://www.paypal.com/fr/cgi-bin/webscr">Faire un don</a></li>
+                <li role="presentation"><%= link_to "A propos",  about_path, class: "btna"%></li>
+               
+                
+                
+              </ul>
       </div>
-    </div>
-  <%end%>
-  
+              
+    </nav>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6" id="zone_pitch_don"><h2 class="text_don">Avec votre don nous pouvons continuer la construction de citerne. </h2>
+          </div>
+
+          <div class="col-lg-5" id="zonepay">
+            <div class="text-center"><h1 class="t_don">Faites un don</h1></div>
+              <%= form_for(@charge, url: charges_path, html: {method: :post, id: "payment-form"})  do |f|%>
+                <div class="form-row">
+                  <label>
+                    <span>Entrez votre somme</span>
+                    <%= f.text_field :price, class: 'form-control' %>
+                  </label>
+                </div>
+
+                <div class="form-row">
+                  <label>
+                    <span>Votre prénom</span>
+                    <%= f.text_field :first_name, class: 'form-control' %>
+                  </label>
+                </div>
+
+                <div class="form-row">
+                  <label>
+                    <span>Votre nom</span>
+                    <%= f.text_field :last_name, class: 'form-control' %>
+                  </label>
+                </div>
+
+                <div class="form-row">
+                  <label>
+                    <span>Votre email</span>
+                    <%= f.text_field :email, class: 'form-control' %>
+                  </label>
+                </div>
+
+                <div class="form-row">
+                  <label>
+                    <span>Votre numéro de carte</span>
+                    <input type="text" size="20" data-stripe="number" id="card_number" class='form-control'/>
+                  </label>
+                </div>
+
+                <div class="form-row">
+                  <label>
+                    <span>CVC</span>
+                    <input type="text" size="4" data-stripe="cvc" id="cvc" class='form-control'/>
+                  </label>
+                </div>
+
+                <div class="form-row">
+                  <label>
+                    <span><!--Expiration<br>--> (MM/YYYY)</span><br>
+                    <input type="text" size="4" data-stripe="exp-month" id="exp-month"/>
+                  </label>
+                  <span> / </span>
+                  <input type="text" size="4" data-stripe="exp-year" id="exp-year" />
+                </div>
+
+                <div class="text-center">
+                  <div class="actions">
+                    <%= f.submit "Valider", :class => "btn btn-lg btn-primary" %>
+                  </div>
+                </div>
+              <%end%>    
+            </div>  
+          </div>
+       </div>
+
+      <footer>
+        <div class="container">
+          <p class="pull-right"><a href="#"class="link_footer">Back to top</a></p>
+          <p class="link_footer">&copy; 2015 Al Amaana. &middot; <a href="mentions.html"class="link_footer">Mentions légales</a> &middot; <a href="about.html"class="link_footer">Qui nous sommes ?</a></p>
+          <div class="text-center">
+            <p class="social">
+              <a href="https://youtu.be/UgP9CHMkkoI" target="_blank"><img src="assets/youtube.png" class="youtube"></a><a href="https://www.facebook.com/Alamaana974?ref=br_rs" target="_blank"><img src="assets/facebook.png" class="facebook"></a>
+            </p>
+          </div>
+         </div>
+        </footer>
     
-   </div> 
+  </div>
 </div>
+    <script type="text/javascript">
+      // This identifies your website in the createToken call below
+      Stripe.setPublishableKey('pk_test_GkGtqHerZHWAxOmZEoreYASE');
+      // ...
+      jQuery(function($) {
+      $('#payment-form').submit(function(event) {
+        var $form = $(this);
 
-<script type="text/javascript">
-  // This identifies your website in the createToken call below
-  Stripe.setPublishableKey('pk_test_GkGtqHerZHWAxOmZEoreYASE');
-  // ...
-  jQuery(function($) {
-  $('#payment-form').submit(function(event) {
-    var $form = $(this);
+        // Disable the submit button to prevent repeated clicks
+        $form.find('button').prop('disabled', true);
 
-    // Disable the submit button to prevent repeated clicks
-    $form.find('button').prop('disabled', true);
+        Stripe.card.createToken($form, stripeResponseHandler);
 
-    Stripe.card.createToken($form, stripeResponseHandler);
+        // Prevent the form from submitting with the default action
+        return false;
+      });
+    });
 
-    // Prevent the form from submitting with the default action
-    return false;
-  });
-});
+      function stripeResponseHandler(status, response) {
+      var $form = $('#payment-form');
 
-  function stripeResponseHandler(status, response) {
-  var $form = $('#payment-form');
-
-  if (response.error) {
-    // Show the errors on the form
-    $form.find('.payment-errors').text(response.error.message);
-    $form.find('button').prop('disabled', false);
-  } else {
-    // response contains id and card, which contains additional card details
-    var token = response.id;
-    // Insert the token into the form so it gets submitted to the server
-    $form.append($('<input type="hidden" name="stripeToken" />').val(token));
-    // and submit
-    $form.get(0).submit();
-  }
-};
-</script>
+      if (response.error) {
+        // Show the errors on the form
+        $form.find('.payment-errors').text(response.error.message);
+        $form.find('button').prop('disabled', false);
+      } else {
+        // response contains id and card, which contains additional card details
+        var token = response.id;
+        // Insert the token into the form so it gets submitted to the server
+        $form.append($('<input type="hidden" name="stripeToken" />').val(token));
+        // and submit
+        $form.get(0).submit();
+      }
+    };
+    </script>

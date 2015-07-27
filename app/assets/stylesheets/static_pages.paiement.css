@@ -1,3 +1,26 @@
+.jumbotron.pay {
+  /* padding: 30px; */
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: #eee;
+  background: url(citerne.jpg)no-repeat center; 
+	height: 900px;
+	width: 100%;
+	background-position: center center;
+	background-size: cover;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+ul.nav.nav-pills.pull-right
+{
+	padding-top: 50px;
+	color: white;
+	font-size: 18px;
+	margin-right: 30px;
+}	
 .nav-pills>li.active>a
 {
 	background-color: #ee6059!important;
@@ -9,4 +32,33 @@ a.btna
 .nav>li>a:hover
 {
 	background-color: #3276b1;
+}
+#zone_pitch_don
+{
+	padding-top: 160px;
+}
+#zonepay
+{
+	background-color: white;
+	border-radius: 4px;
+	padding-bottom: 30px;	
+	text-align: center;
+}
+h1.t_don 
+{
+	font-size: 24px;
+}
+.text_don
+{
+	color: white;
+	font-size: 40px;
+}
+.actions
+{
+	margin-top: 20px;
+}
+.link_footer
+{
+	color: white;
+	font-weight: bold;
 }

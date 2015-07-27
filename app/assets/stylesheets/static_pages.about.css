@@ -21,13 +21,19 @@ body.apropos
 {
 	background-color: #ee6059!important;
 }
-a.btna
+a.btnabout
 {
-	color: white!important;
+	color: #3276b1!important;
 }
 .nav>li>a:hover
 {
-	background-color: #3276b1;
+	background-color: white;
+}
+#title.about
+{
+	margin-top: 60px!important;
+	margin-bottom: 60px!important;
+	color: red;
 }
 .mission
 {
@@ -41,4 +47,14 @@ a.btna
 #profile
 {
 	margin-bottom: 60px;
+}
+.img-circle
+{
+	border:1px solid black;
+
+}
+h2.what
+{
+	margin-bottom: 40px;
+	margin-top: 40px;
 }

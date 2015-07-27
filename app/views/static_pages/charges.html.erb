@@ -20,4 +20,27 @@
           
 </nav>
 
+<div class="container mention">
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+       <h1 class="text-center">Merci <%= @charge.first_name%> <%= @charge.last_name%> ! </h1>
+       <h3>Pour fais un don de <%= @charge.price%> euros en faveur de notre association.</h3><br><br>
+        <div class="text-center"><%= link_to "Retour à la page d'accueil",  root_path %></div>
+    </div>
+
+  </div>
+</div>
+<footer>
+  <div class="container">
+          <p class="pull-right"><a href="#">Back to top</a></p>
+          <p>&copy; 2015 Al Amaana. &middot; <a href="mentions.html">Mentions légales</a> &middot; <a href="about.html">Qui nous sommes ?</a>
+          </p>
+    <div class="text-center">
+      <p class="social">
+        <a href="https://youtu.be/UgP9CHMkkoI" target="_blank"><img src="assets/youtube.png" class="youtube"></a><a href="https://www.facebook.com/Alamaana974?ref=br_rs" target="_blank"><img src="assets/facebook.png" class="facebook"></a>
+      </p>
+    </div>
+  </div>
+</footer>    
+
 <h3>merci pour votre paiement</h3><h3><%= @charge.price%> <%= @charge.last_name%><%= @charge.first_name%><%= @charge.email%></h3>
