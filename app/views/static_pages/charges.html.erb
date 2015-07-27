@@ -1,46 +1,47 @@
-<nav class="navbar navbar-inverse navbar-static-top">
-  <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <%= link_to (image_tag("logo.JPG", class: "logo")), root_path %>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="paiement.html">Faire un don</a></li>
-            <li role="presentation"><%= link_to "A propos",  about_path , class: "btna"%></li>
-           
-            
-            
-          </ul>
-  </div>
-          
-</nav>
-
-<div class="container mention">
-  <div class="row">
-    <div class="col-lg-6 col-lg-offset-3">
-       <h1 class="text-center">Merci <%= @charge.first_name%> <%= @charge.last_name%> ! </h1>
-       <h3>Pour fais un don de <%= @charge.price%> euros en faveur de notre association.</h3><br><br>
-        <div class="text-center"><%= link_to "Retour à la page d'accueil",  root_path %></div>
+<!--<div class="jumbotron charges">  -->
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <%= link_to (image_tag("logo.JPG", class: "logo")), root_path %>
+              </div>
+              <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav nav-pills pull-right">
+              <li role="presentation" class="active"><a href="paiement.html">Faire un don</a></li>
+              <li role="presentation"><%= link_to "A propos",  about_path , class: "btna"%></li>
+             
+              
+              
+            </ul>
     </div>
+            
+  </nav>
 
-  </div>
-</div>
-<footer>
-  <div class="container">
-          <p class="pull-right"><a href="#">Back to top</a></p>
-          <p>&copy; 2015 Al Amaana. &middot; <a href="mentions.html">Mentions légales</a> &middot; <a href="about.html">Qui nous sommes ?</a>
-          </p>
-    <div class="text-center">
-      <p class="social">
-        <a href="https://youtu.be/UgP9CHMkkoI" target="_blank"><img src="assets/youtube.png" class="youtube"></a><a href="https://www.facebook.com/Alamaana974?ref=br_rs" target="_blank"><img src="assets/facebook.png" class="facebook"></a>
-      </p>
+  <div class="container mention">
+    <div class="row">
+      <div class="col-lg-6 col-lg-offset-3">
+         <h1 class="text-center">Merci <%= @charge.first_name%> <%= @charge.last_name%> ! </h1>
+         <h3>Pour votre don de <%= @charge.price%> euros en faveur de notre association.</h3><br><br>
+          <div class="text-center"><%= link_to "Retour à la page d'accueil",  root_path %></div>
+      </div>
+
     </div>
   </div>
-</footer>    
-
-<h3>merci pour votre paiement</h3><h3><%= @charge.price%> <%= @charge.last_name%><%= @charge.first_name%><%= @charge.email%></h3>
+  <footer>
+    <div class="container">
+            <p class="pull-right"><a href="#">Back to top</a></p>
+            <p>&copy; 2015 Al Amaana. &middot; <a href="mentions.html">Mentions légales</a> &middot; <a href="about.html">Qui nous sommes ?</a>
+            </p>
+      <div class="text-center">
+        <p class="social">
+          <a href="https://youtu.be/UgP9CHMkkoI" target="_blank"><img src="assets/youtube.png" class="youtube"></a><a href="https://www.facebook.com/Alamaana974?ref=br_rs" target="_blank"><img src="assets/facebook.png" class="facebook"></a>
+          <a href="https://twitter.com/alamaana974" target="_blank"><img src="assets/twitter.png" class="youtube"></a>
+        </p>
+      </div>
+    </div>
+  </footer>    
+<!--</div>-->

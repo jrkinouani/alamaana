@@ -9,7 +9,7 @@ class StaticPagesController < ApplicationController
   	
   end
   def charges
-    Stripe.api_key = "sk_test_OYnaaxeKJWTkcVODcqUWMfLr"
+    Stripe.api_key = "sk_test_NeAgcE0b2nuaLpV5nLiTxQsn"
 
     # Get the credit card details submitted by the form
     token = params[:stripeToken]
